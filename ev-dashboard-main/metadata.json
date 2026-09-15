@@ -1,0 +1,7 @@
+{
+  "name": "Electric Scooter Digital Instrument Cluster",
+  "description": "A modern and futuristic electric scooter digital instrument cluster UI with real-time BMS, motor telemetry, circular speedometer, and 20-cell battery monitoring.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
