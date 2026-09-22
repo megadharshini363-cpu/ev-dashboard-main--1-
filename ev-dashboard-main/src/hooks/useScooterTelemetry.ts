@@ -5,7 +5,7 @@ import { INITIAL_TELEMETRY } from '../constants';
 export function useScooterTelemetry() {
   const [telemetry, setTelemetry] = useState<ScooterTelemetry>(INITIAL_TELEMETRY);
   const [isSimulating, setIsSimulating] = useState<boolean>(false);
-  const [throttleInput, setThrottleInput] = useState<number>(45); // Target speed or throttle %
+  const [throttleInput, setThrottleInput] = useState<number>(0); // Target speed or throttle %
   const [isBraking, setIsBraking] = useState<boolean>(false);
   const [isWebSocketConnected, setIsWebSocketConnected] = useState<boolean>(true);
   const [blinkerState, setBlinkerState] = useState<boolean>(false);

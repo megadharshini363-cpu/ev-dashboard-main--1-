@@ -55,6 +55,11 @@ port.on("data", (chunk) => {
   });
 });
 
+port.on("close", () => {
+  console.log("Kit disconnected!");
+  realData = {};
+});
+
 app.get("/api/ev-data", (req, res) => {
   res.json(realData);
 });

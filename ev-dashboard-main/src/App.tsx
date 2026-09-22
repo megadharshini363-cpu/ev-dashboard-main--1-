@@ -47,28 +47,28 @@ export default function App() {
         batterySOC:
           data.SOC !== undefined
             ? data.SOC / 10
-            : prev.batterySOC,
+            : 0,
 
         totalVoltage:
           data.Total_Voltage !== undefined
             ? data.Total_Voltage / 10
-            : prev.totalVoltage,
+            : 0,
 
         current:
           data.Current !== undefined
             ? data.Current
-            : prev.current,
+            : 0,
 
         batteryTemp:
           data.Temp_Sensor1 !== undefined
             ? data.Temp_Sensor1
-            : prev.batteryTemp,
+            : 0,
 
         // Speed from kit, if available
         speed:
           data.Speed !== undefined
            ? data.Speed
-           : prev.speed,
+           : 0,
 
         cells: Array.from({ length: 20 }, (_, i) => {
   const voltage = data[`V${i + 1}`] !== undefined
@@ -105,7 +105,7 @@ export default function App() {
   return () => clearInterval(interval);
 }, []);
   const handleResetDefaults = () => {
-    setThrottleInput(45);
+    setThrottleInput(0);
     setIsBraking(false);
     setTelemetry(INITIAL_TELEMETRY);
   };
