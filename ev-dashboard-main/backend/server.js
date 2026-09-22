@@ -61,6 +61,7 @@ port.on("close", () => {
 });
 
 app.get("/api/ev-data", (req, res) => {
+  console.log("API DATA:", realData);
   res.json(realData);
 });
 
