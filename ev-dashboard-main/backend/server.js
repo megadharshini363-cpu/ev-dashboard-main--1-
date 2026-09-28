@@ -10,7 +10,7 @@ app.use(express.json());
 let realData = {};
 
 const port = new SerialPort({
-  path: "COM5",
+  path: "COM3",
   baudRate: 9600,
   autoOpen: false
 });
